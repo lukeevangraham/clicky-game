@@ -9,7 +9,7 @@ function Navbar(props) {
           Clicky Game Test
       </li>
         <li>Click an image to begin</li>
-        <li></li>
+        {/* <li>Score: {score}</li> */}
       </ul>
 
 
