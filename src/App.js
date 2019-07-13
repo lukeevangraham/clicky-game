@@ -7,13 +7,13 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    photos
-  };
+    photos,
+    timesClicked: 0
+  }
+
 
   incrementClick = id => {
-    console.log(this.timesClicked)
-    this.timesClicked++
-    console.log(this.timesClicked)
+    this.setState({ timesClicked: this.state.timesClicked + 1 });
   }
 
   // reposition = id => {
@@ -25,16 +25,18 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-<Navbar>Test</Navbar>
-{/* <div className="row"> */}
+        <Navbar>Test</Navbar>
+        {/* <div className="row"> */}
+          <h1>Times clicked: { this.state.timesClicked }</h1>
+          {console.log(this.state)}
         {this.state.photos.map(photo => (
           <PhotoCard
-          incrementClick={this.incrementClick}
+            onClick={this.incrementClick}
             clickPhoto={this.clicked}
             id={photo.id}
             key={photo.id}
             image={photo.image}
-            timesClicked={this.timesClicked}
+            timesClicked={this.state.timesClicked}
           />
         ))}
         {/* </div> */}

@@ -3,7 +3,7 @@ import "./style.css";
 
 function Photo(props) {
   return (
-    <span onClick={() => props.incrementClick(props.id)}>
+    <span onClick={() => props.onClick(props.id)}>
       <div className="card">
         <div className="img-container">
           <img alt={props.name} src={props.image} />
