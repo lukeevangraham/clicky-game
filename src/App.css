@@ -40,7 +40,7 @@
 }
 
 .footer {
-  background: #5133a4;
+  background: #52433E;
   color: white
 }
 
@@ -50,4 +50,8 @@
 
 .jumbotron {
   background-image: url("./yosemite.jpg")
+}
+
+.bigwrap {
+  background-color: #D1AB9F
 }

@@ -59,12 +59,12 @@ class App extends Component {
 
           <Navbar message={this.state.message} score={this.state.score} topscore={this.state.topscore} />
           <div className="spacer"></div>
-          <div className="jumbotron p-5">
+          <div className="jumbotron p-5 m-0">
             <h1 className="display-4 text-center">Clicky Game!</h1>
-            <p className="text-center">Click on an image to earn points, but don't click on any more than once!</p>
+            <h5 className="text-center">Click on an image to earn points, but don't click on any more than once!</h5>
           </div>
           {/* {console.log(this.state)} */}
-        <div className="row">
+        <div className="row bigwrap pt-4">
           <div className="col-11 mx-auto">
             <div className="wrapper mx-auto">
               {this.state.photos.map(photo => (
