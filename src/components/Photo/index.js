@@ -3,13 +3,13 @@ import "./style.css";
 
 function Photo(props) {
   return (
-    <span onClick={() => props.onClick(props.id)}>
+    <div style={{ flex: "1" }} onClick={() => props.onClick(props.id)}>
       <div className="card">
-        <div className="img-container">
+        <div className="img-fluid">
           <img alt={props.name} src={props.image} />
         </div>
       </div>
-      </span>
+    </div>
   );
 }
 

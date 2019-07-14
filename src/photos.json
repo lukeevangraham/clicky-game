@@ -2,61 +2,61 @@
   {
     "id": 1,
     "image": "./images/bixbybridge.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 2,
     "image": "./images/dunes.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 3,
     "image": "./images/falls.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 4,
     "image": "./images/flower.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 5,
     "image": "./images/goldengate.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 6,
     "image": "./images/hollywood.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 7,
     "image": "./images/pier.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 8,
     "image": "./images/rocks.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 9,
     "image": "./images/skyline.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 10,
     "image": "./images/vineyard.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 11,
     "image": "./images/wave.jpg",
-    "clicked": 0
+    "clicked": false
   },
   {
     "id": 12,
     "image": "./images/wind.jpg",
-    "clicked": 0
+    "clicked": false
   }
 ]
