@@ -6,8 +6,9 @@
   flex-flow: row wrap;
   /* flex-wrap: wrap; */
   padding: 20px;
-  /* width: 90%; */
+  width: 90%;
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+
 }

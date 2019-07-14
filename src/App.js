@@ -12,35 +12,35 @@ class App extends Component {
     previousIDsClicked: []
   };
 
-  shuffleArray = (data) => {
-    let newArray = data.sort(function(a, b)
-    {return 0.5 - Math.random()})
+  shuffleArray = data => {
+    let newArray = data.sort(function(a, b) {
+      return 0.5 - Math.random();
+    });
     return newArray;
-  }
+  };
 
   handleClick = id => {
     // console.log(id);
     //if previous IDS clicked contains ID
     if (this.state.previousIDsClicked.includes(id)) {
-      this.setState({score : 0})
-      this.setState({ previousIDsClicked : [] })
+      this.setState({ score: 0 });
+      this.setState({ previousIDsClicked: [] });
 
       // alert user game over
-    }  
+    }
     // else add to array of previous IDs clicked
     else {
-      this.setState({ previousIDsClicked : [...this.state.previousIDsClicked, id] })
+      this.setState({
+        previousIDsClicked: [...this.state.previousIDsClicked, id]
+      });
       // console.log(this.state.previousIDsClicked)
 
       // increase score
-      this.setState({ score : this.state.score + 1 })
-      
+      this.setState({ score: this.state.score + 1 });
+
       // shuffle images
-      this.shuffleArray(photos)
-
+      this.shuffleArray(photos);
     }
-
-
 
     // if score is greater than high score then score = high schore
     // else score goes to zero
@@ -58,25 +58,28 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <Navbar></Navbar>
+          <Navbar />
           {/* <div className="row"> */}
           <h1>Score: {this.state.score}</h1>
           {console.log(this.state)}
         </div>
-      <div className="wrapper">
-          {this.state.photos.map(photo => (
-            <PhotoCard
-              onClick={this.handleClick}
-              clickPhoto={this.clicked}
-              id={photo.id}
-              key={photo.id}
-              image={photo.image}
-              timesClicked={this.state.timesClicked}
-            />
-          ))}
+        <div className="row">
+          <div className="col-11 mx-auto">
+            <div className="wrapper mx-auto">
+              {this.state.photos.map(photo => (
+                <PhotoCard
+                  onClick={this.handleClick}
+                  clickPhoto={this.clicked}
+                  id={photo.id}
+                  key={photo.id}
+                  image={photo.image}
+                  timesClicked={this.state.timesClicked}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      
     );
   }
 }
