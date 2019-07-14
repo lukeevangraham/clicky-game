@@ -38,3 +38,16 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  background: #5133a4;
+  color: white
+}
+
+.spacer {
+  height: 70px;
+}
+
+.jumbotron {
+  background-image: url("./yosemite.jpg")
+}

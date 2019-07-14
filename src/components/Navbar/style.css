@@ -1,8 +1,29 @@
-.title {
+.navbar {
+  background: #5133a4;
+  min-height: 70px;
+  position: fixed;
   width: 100%;
-  text-align: center;
-  font-size: 3rem;
-  text-decoration: underline;
-  color: #2A77AE;
-  margin-bottom: 50px;
+  box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+  color: rgb(255, 255, 255);
+  font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+  z-index: 99;
+  white-space: nowrap;
+  /* text-align: center; */
+  /* text-decoration: underline; */
+  /* margin-bottom: 50px; */
+
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 26px 0;
+  width: 33.3%;
+  text-align: center
+}
+
+.navbar ul {
+  margin: 0;
+  /* pad: 0; */
+  width: 100%;
+  padding-inline-start: 0%
 }

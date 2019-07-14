@@ -9,7 +9,9 @@ class App extends Component {
   state = {
     photos,
     score: 0,
-    previousIDsClicked: []
+    topscore: 0,
+    previousIDsClicked: [],
+    message: "Click an image to begin"
   };
 
   shuffleArray = data => {
@@ -27,42 +29,41 @@ class App extends Component {
       this.setState({ previousIDsClicked: [] });
 
       // alert user game over
+      this.setState({ message: "You guessed incorrectly!" })
     }
     // else add to array of previous IDs clicked
     else {
       this.setState({
-        previousIDsClicked: [...this.state.previousIDsClicked, id]
+        previousIDsClicked: [...this.state.previousIDsClicked, id],
+        message: "You guessed correctly!"
       });
-      // console.log(this.state.previousIDsClicked)
 
       // increase score
       this.setState({ score: this.state.score + 1 });
+
+      if (this.state.score === this.state.topscore) {
+        this.setState({ topscore: this.state.topscore + 1})
+        
+      }
+      // increase topscore
 
       // shuffle images
       this.shuffleArray(photos);
     }
 
-    // if score is greater than high score then score = high schore
-    // else score goes to zero
-
-    // this.setState({ timesClicked: this.state.timesClicked + 1 });
   };
-
-  // reposition = id => {
-  //   // Filter this.state.photos for photos with an id not equal to the id clicked
-  //   const photos = this.state.photos.filter(photo => photo.id !== id);
-  //   this.setState({ photos })
-  // }
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <Navbar />
-          {/* <div className="row"> */}
-          <h1>Score: {this.state.score}</h1>
-          {console.log(this.state)}
-        </div>
+      <div className="container col-12 m-0 p-0">
+
+          <Navbar message={this.state.message} score={this.state.score} topscore={this.state.topscore} />
+          <div className="spacer"></div>
+          <div className="jumbotron p-5">
+            <h1 className="display-4 text-center">Clicky Game!</h1>
+            <p className="text-center">Click on an image to earn points, but don't click on any more than once!</p>
+          </div>
+          {/* {console.log(this.state)} */}
         <div className="row">
           <div className="col-11 mx-auto">
             <div className="wrapper mx-auto">
@@ -78,6 +79,7 @@ class App extends Component {
               ))}
             </div>
           </div>
+            <div className="footer col-12 mt-4 pl-5 p-4">Clicky Game React</div>
         </div>
       </div>
     );
