@@ -12,6 +12,6 @@ The application displays California-themed images on the screen. Each image can 
 
 The application keeps track of the user's score. The user's score increases when clicking an image for the first time. The user's score resets to 0 if they click the same image more than once.
 
-Every time an image is clicked, the images displayed on the page shuffle themselves in a random order.
+Every time an image is clicked, the images shuffle themselves in a random order.
 
 Once the user's score is reset after an incorrect guess, the game restarts.
