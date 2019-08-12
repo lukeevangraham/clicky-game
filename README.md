@@ -1,5 +1,12 @@
+# Clicky Game
 
 ## Overview
+
+Deployed at:  https://lukeevangraham.github.io/clicky-game/
+
+Clicky game is a memory game.  The game is built with React using components, managing state and responding to user events.
+
+## Using The App
 
 The application renders different images to the screen. Each image listens for click events.
 
