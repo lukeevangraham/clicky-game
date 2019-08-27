@@ -4,9 +4,10 @@
 
 Deployed at:  https://lukeevangraham.github.io/clicky-game/
 
+Clicky game is a memory game.  The game remembers which images have been clicked on.  The images shuffle randomly after being clicked.  When the same image is clicked on twice the game is over.  
+
 ![Game](./readmeImages/game.png?raw=true "Game")
 
-Clicky game is a memory game.  The game remembers which images have been clicked on.  The images shuffle randomly after being clicked.  When the same image is clicked on twice the game is over.  
 
 ## Using The App
 
